@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动下载文件</title>
+</head>
+<body>
+    <h1>正在下载文件...</h1>
+    <script type="text/javascript">
+        window.onload = function() {
+            var link = document.createElement('a');
+            link.href = 'pack.7z'; // 替换为文件的路径
+            link.download = 'pack.7z'; // 设置下载后的文件名
+
+            // 触发下载
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
